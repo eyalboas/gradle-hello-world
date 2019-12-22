@@ -1,6 +1,5 @@
-node('slave1'){
 def getHomeDir = tool 'gradle4'
-}
+
 pipeline{
    agent{label 'slave1'} 
    stages{
