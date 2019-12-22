@@ -15,8 +15,7 @@ pipeline {
      }
     // this section runs as post-processing
     post { 
-        always {  // this is a condition
-            echo 'I will always love you!'
+        addInfoBadge(text: 'info')
         }
     }
 }
