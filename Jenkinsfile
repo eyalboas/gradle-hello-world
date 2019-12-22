@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build Maven') {
             steps {
-                def mvnHome = tool 'gradle4'
+                def gradleHome = tool 'gradle4'
                 sh "${gradleHome}/bin/gradle build"
             }
         }
