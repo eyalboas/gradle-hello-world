@@ -15,6 +15,8 @@ pipeline {
      }
     // this section runs as post-processing
     post { 
-        addInfoBadge(text: 'info')
+        always{
+            addInfoBadge(text: 'info')
         }
+    }
     }
