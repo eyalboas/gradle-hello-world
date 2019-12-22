@@ -1,4 +1,6 @@
+node('slave1'){
 def gradleHome = tool 'gradle4'
+}
 pipeline{
    agent{label 'slave'} 
    stages{
