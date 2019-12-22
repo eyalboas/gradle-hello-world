@@ -20,6 +20,6 @@ pipeline{
    post{
       addBadge(icon:"green.gif", text:"Success")
       }
-   }
+   
    
 }
