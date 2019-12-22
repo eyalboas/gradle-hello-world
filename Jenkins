@@ -1,0 +1,22 @@
+pipeline {
+    
+    agent {label 'slave'}
+    stages {
+        stage('checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build Maven') {
+            steps {
+                sh 'whoami'
+            }
+        }
+     }
+    // this section runs as post-processing
+    post { 
+        always {  // this is a condition
+            echo 'I will always love you!'
+        }
+    }
+}
