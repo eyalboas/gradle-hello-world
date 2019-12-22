@@ -17,9 +17,14 @@ pipeline{
       }
    }
    
-   post{
-      addBadge(icon:"green.gif", text:"Success")
-      }
+post {
+    always {
+        echo 'This will always run'
+    }
+    success {
+        echo 'This will always run'
+    }
+}
    
    
 }
