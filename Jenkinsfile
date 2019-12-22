@@ -1,3 +1,4 @@
+def gradleHome = tool 'gradle4'
 pipeline{
    agent{label 'slave'} 
    stages{
@@ -8,11 +9,9 @@ pipeline{
       }
       stage('Build Gradle'){
          steps{
-            def gradleHome = tool 'gradle4'
             sh "${gradleHome}/bin/gradle build"
          }
       }
-      
    }
    
    post{
