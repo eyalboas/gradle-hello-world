@@ -16,4 +16,10 @@ node('slave') {
       // Run the maven build
       sh "${gradleHome}/bin/gradle build"
    }
+   
+   post{
+      always{
+       echo "Hello World"  
+      }
+   }
 }
