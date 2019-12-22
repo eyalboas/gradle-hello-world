@@ -12,7 +12,7 @@ pipeline{
       stage('Build Gradle'){
          steps{
             //sh "${getHomeDir}/bin/gradle build"
-            println getHomeDir
+            println $getHomeDir
          }
       }
    }
