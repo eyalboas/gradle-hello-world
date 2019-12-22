@@ -18,8 +18,7 @@ pipeline{
    }
    
    post{
-      always{
-       echo "Hello World"  
+      addBadge(icon:"green.gif", text:"Success")
       }
    }
    
