@@ -1,5 +1,6 @@
+node('slave1'){
 def getHomeDir = tool 'gradle4'
-
+}
 pipeline{
    agent{label 'slave1'} 
    stages{
@@ -11,7 +12,7 @@ pipeline{
       stage('Build Gradle'){
          steps{
             //sh "${getHomeDir}/bin/gradle build"
-            println getHomeDir
+            println tool 'gradle4'
          }
       }
    }
